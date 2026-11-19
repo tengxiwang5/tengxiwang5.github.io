@@ -151,6 +151,12 @@ a {
 
 html {
   scroll-behavior: smooth;
+  cursor: url('images/icon/cursor.png'), auto;
+}
+
+a[href],
+button:enabled {
+  cursor: url('images/icon/cursor-pointer.png'), pointer;
 }
 
 .page-section {
@@ -717,7 +723,6 @@ span.highlight {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #fff;
-  cursor: pointer;
   border-radius: 50%;
   font-size: 0;
   display: flex;
@@ -1058,7 +1063,6 @@ span.highlight {
   padding: .25rem;
   background: none;
   font-size: 1rem;
-  cursor: pointer;
 }
 
 .academic-portrait {
@@ -1150,7 +1154,6 @@ span.highlight {
   color: #723b16;
   font: inherit;
   font-size: .875rem;
-  cursor: pointer;
 }
 
 .publication-filters button:hover {
