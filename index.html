@@ -89,12 +89,13 @@
       <div class="publication-filters" id="publication-filters" role="group" aria-label="Filter publications" hidden>
         <button type="button" aria-pressed="true" data-filter="all">All</button>
         <button type="button" aria-pressed="false" data-filter="remote-sensing">Remote Sensing</button>
-        <button type="button" aria-pressed="false" data-filter="3d-vision">3D Vision</button>
-        <button type="button" aria-pressed="false" data-filter="preprint">Preprints</button>
+        <button type="button" aria-pressed="false" data-filter="agentic-reasoning">Agentic Reasoning</button>
+        <button type="button" aria-pressed="false" data-filter="generation-model">Generation Model</button>
+        <button type="button" aria-pressed="false" data-filter="time-modeling">Time Modeling</button>
       </div>
 
       <div class="publication-list" id="publication-list">
-        <article class="publication-card publication-featured" data-topics="remote-sensing 3d-vision">
+        <article class="publication-card publication-featured" data-topics="remote-sensing agentic-reasoning">
           <div class="publication-label">
             <p class="publication-venue">ISPRS JPRS <time datetime="2026">2026</time></p>
           </div>
@@ -106,23 +107,33 @@
           </div>
         </article>
 
-        <article class="publication-card" data-topics="remote-sensing 3d-vision">
-          <div class="publication-label"><p class="publication-venue">ISPRS Archives <time datetime="2026">2026</time></p></div>
+        <article class="publication-card" data-topics="remote-sensing">
+          <div class="publication-label"><p class="publication-venue">IEEE TGRS <time datetime="2026">2026</time></p></div>
           <div class="publication-details">
-            <h3><a href="https://isprs-archives.copernicus.org/articles/XLIX-B2-2026/1335/2026/">GeoOpen3D: Geometry-guided training-free open-vocabulary 3D segmentation via visual foundation models</a></h3>
-            <p class="publication-byline">Shuai Zhang, Zhuoxiao Li, Jing Ou, <strong>Tengxi Wang</strong>, Zhecheng Shi, Wufan Zhao*</p>
-            <p class="academic-links"><a href="https://isprs-archives.copernicus.org/articles/XLIX-B2-2026/1335/2026/">Paper</a></p>
-            <p>Transfers visual foundation models to outdoor 3D point clouds for open-vocabulary segmentation through depth-aware projection and mask refinement.</p>
+            <h3><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=96Sl_78AAAAJ&amp;citation_for_view=96Sl_78AAAAJ:2osOgNQ5qMEC">DSTI-Net: A Dynamic Spatial-Temporal Interaction Network with Semantic Guidance for 2-D and 3-D Change Detection</a></h3>
+            <p class="publication-byline"><strong>Tengxi Wang</strong>, Shuai Zhang, Mengmeng Li, Wufan Zhao*</p>
+            <p class="academic-links"><a href="https://doi.org/10.1109/TGRS.2026.3669158">Paper</a></p>
+            <p>DSTI-Net links changes in 2-D land cover with changes in 3-D structure by learning how semantic and geometric features interact across observation times.</p>
           </div>
         </article>
 
-        <article class="publication-card" data-topics="remote-sensing preprint">
+        <article class="publication-card" data-topics="time-modeling">
+          <div class="publication-label"><p class="publication-venue">Applied Energy <time datetime="2027">2027</time></p></div>
+          <div class="publication-details">
+            <h3><a href="https://www.sciencedirect.com/science/article/pii/S0306261926016983">Electrochemical-guided time-frequency transformer for battery state-of-health estimation</a></h3>
+            <p class="publication-byline">Hongyu Sun, Peidong Zheng, Junying Wei, <strong>Tengxi Wang</strong>, Qiang Liu</p>
+            <p class="academic-links"><a href="https://doi.org/10.1016/j.apenergy.2026.129042">Paper</a></p>
+            <p>EG-Former uses electrochemical indicators to identify degradation-sensitive regions and combines graph and time-frequency features to estimate battery state of health.</p>
+          </div>
+        </article>
+
+        <article class="publication-card" data-topics="remote-sensing generation-model">
           <div class="publication-label"><p class="publication-venue">Preprint <time datetime="2026">2026</time></p></div>
           <div class="publication-details">
-            <h3><a href="https://arxiv.org/abs/2610.37576">The Noise Plane: A Diffusion Bridge Across Exponent and Dispersion</a></h3>
-            <p class="publication-byline">Xuran Hu, Yuru Jia, <strong>Tengxi Wang</strong>, Miloš Daković, Ljubiša Stanković, Wufan Zhao*</p>
-            <p class="academic-links"><a href="https://arxiv.org/abs/2610.37576">arXiv</a></p>
-            <p>Uses an exponent-conditioned diffusion bridge to denoise images across signal-dependent noise regimes, including synthetic aperture radar imagery.</p>
+            <h3><a href="https://arxiv.org/abs/2611.23187">Any2Building: Unifying Point Clouds and Images for Building Reconstruction via Shared Spatial Queries</a></h3>
+            <p class="publication-byline">Hongye Hou, Zhuoxiao Li, Liu Xiangyu, <strong>Tengxi Wang</strong>, Jing Ou, Dongli Wu, Shuai Zhang, Tongyan Hua, Wufan Zhao</p>
+            <p class="academic-links"><a href="https://arxiv.org/abs/2611.23187">arXiv</a></p>
+            <p>Any2Building reconstructs structured 3-D buildings at LoD2 from partial point clouds, overhead images, or both, using a shared set of spatial queries.</p>
           </div>
         </article>
       </div>
