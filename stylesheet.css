@@ -367,10 +367,16 @@ heading {
   margin-bottom: 24px;
 }
 .news-highlight {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  -webkit-text-decoration-color: #ad7020;
-  text-decoration-color: #fba524;
+  background: linear-gradient(
+    to bottom,
+    transparent 58%,
+    rgba(251, 165, 36, .28) 58%,
+    rgba(243, 208, 8, .28) 90%,
+    transparent 90%
+  );
+  padding-inline: 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .news-text {
   font-size: 14px;
