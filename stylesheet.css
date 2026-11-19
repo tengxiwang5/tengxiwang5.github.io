@@ -864,7 +864,7 @@ span.highlight {
 }
 
 .mountain-cta:hover {
-  color: #1d4ed8;
+  color: #173b9e;
   transform: translateY(-2px) scale(1.02);
   animation-play-state: paused;
 }
@@ -907,14 +907,10 @@ span.highlight {
 .mountain-template a {
   color: #fff;
   font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,0.55);
-  text-underline-offset: 3px;
 }
 
 .mountain-template a:hover {
   color: #fef3c7;
-  text-decoration-color: #fef3c7;
 }
 
 @keyframes mountain-cta-blink {
@@ -1015,8 +1011,8 @@ span.highlight {
 
 .academic-homepage a:hover,
 .academic-homepage a:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: .18em;
+  color: #6e3519;
+  text-decoration: none;
 }
 
 .academic-homepage [hidden] {
@@ -1260,8 +1256,7 @@ span.highlight {
 
 .academic-game-link:hover,
 .academic-game-link:focus-visible {
-  color: white;
-  text-decoration: underline;
+  color: #e4dac9;
 }
 
 @media (max-width: 600px) {
