@@ -1011,7 +1011,7 @@ span.highlight {
 
 .academic-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(130px, 28%);
+  grid-template-columns: minmax(0, 1fr) minmax(110px, 20%);
   align-items: center;
   gap: clamp(1.25rem, 4vw, 2.75rem);
   margin-bottom: 2.25rem;
@@ -1328,7 +1328,7 @@ span.highlight {
   .academic-intro .academic-portrait {
     grid-row: 1;
     justify-self: center;
-    width: 122px;
+    width: 104px;
   }
 
   .publication-card {
