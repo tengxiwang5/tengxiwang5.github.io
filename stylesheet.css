@@ -1271,6 +1271,10 @@ span.highlight {
   white-space: nowrap;
 }
 
+#service > ul {
+  padding-inline-start: 0;
+}
+
 .mountain-content {
   box-sizing: border-box;
 }
