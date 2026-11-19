@@ -1211,7 +1211,7 @@ span.highlight {
 
 .publication-card {
   display: grid;
-  grid-template-columns: 8.6rem minmax(0, 1fr);
+  grid-template-columns: 12rem minmax(0, 1fr);
   gap: 1rem;
   padding: 1rem;
   border: 1px solid #e1dad0;
@@ -1237,6 +1237,21 @@ span.highlight {
   color: #68390f;
   font-size: .82rem;
   font-weight: 700;
+}
+
+.publication-figure {
+  display: block;
+  margin-top: .55rem;
+  overflow: hidden;
+  border: 1px solid #e1dad0;
+  border-radius: .35rem;
+  background: white;
+}
+
+.publication-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .publication-details h3,
