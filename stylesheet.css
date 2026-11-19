@@ -1104,7 +1104,21 @@ span.highlight {
 }
 
 .academic-news {
-  padding-left: 1.2rem;
+  display: grid;
+  gap: .45rem;
+  padding: 0;
+}
+
+.academic-news .news-entry {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: .65rem;
+}
+
+.academic-news .news-date-badge {
+  margin: 0;
+  text-align: center;
 }
 
 .academic-muted,
