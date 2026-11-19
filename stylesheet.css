@@ -1005,16 +1005,6 @@ span.highlight {
   font-size: inherit;
 }
 
-.academic-homepage a {
-  color: #88450d;
-}
-
-.academic-homepage a:hover,
-.academic-homepage a:focus-visible {
-  color: #6e3519;
-  text-decoration: none;
-}
-
 .academic-homepage [hidden] {
   display: none;
 }
@@ -1083,7 +1073,6 @@ span.highlight {
 }
 
 .profile-email span {
-  color: #55504a;
   font-weight: 400;
   overflow-wrap: anywhere;
 }
