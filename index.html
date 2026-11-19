@@ -6,7 +6,7 @@
   <meta name="author" content="Tengxi Wang (王腾曦)">
   <meta name="description" content="Tengxi Wang's academic homepage, featuring research in remote sensing, computer vision, and multimodal learning.">
   <title>Tengxi Wang | 王腾曦</title>
-  <link rel="stylesheet" href="stylesheet.css?v=20261119-6">
+  <link rel="stylesheet" href="stylesheet.css?v=20261119-7">
   <link rel="icon" href="images/template/avatar.svg" type="image/svg+xml">
 </head>
 <body>
@@ -38,7 +38,7 @@
         <h2 id="news-heading">News</h2>
         <button type="button" class="academic-news-toggle" id="news-toggle" aria-controls="news-updates" aria-expanded="false" hidden>Expand news</button>
       </div>
-      <ul class="academic-news" id="news-updates" tabindex="0" aria-label="News updates">
+      <ul class="academic-news" id="news-updates" aria-label="News updates">
         <li class="news-entry">
           <time class="news-date-badge" datetime="2026-07-27">Jul. 2026</time>
           <span>Passed my <strong><em>MPhil thesis defense</em></strong>.</span>
@@ -181,12 +181,31 @@
 
     const newsToggle = document.getElementById('news-toggle');
     const newsUpdates = document.getElementById('news-updates');
-    newsToggle.addEventListener('click', () => {
-      const expanded = newsUpdates.classList.toggle('is-expanded');
-      newsToggle.setAttribute('aria-expanded', String(expanded));
-      newsToggle.textContent = expanded ? 'Collapse news' : 'Expand news';
-    });
-    newsToggle.hidden = false;
+    const newsPreviewSize = 4;
+    if (newsUpdates.childElementCount > newsPreviewSize) {
+      const previewEntries = Array.from(newsUpdates.children).slice(0, newsPreviewSize);
+      const lastPreviewEntry = previewEntries[newsPreviewSize - 1];
+      const updateNewsPreviewHeight = () => {
+        const top = newsUpdates.getBoundingClientRect().top;
+        const bottom = lastPreviewEntry.getBoundingClientRect().bottom;
+        const { paddingBottom, borderBottomWidth } = getComputedStyle(newsUpdates);
+        const height = bottom - top + newsUpdates.scrollTop + parseFloat(paddingBottom) + parseFloat(borderBottomWidth);
+        newsUpdates.style.setProperty('--news-preview-height', `${Math.ceil(height)}px`);
+      };
+
+      updateNewsPreviewHeight();
+      const newsResizeObserver = new ResizeObserver(updateNewsPreviewHeight);
+      for (const entry of previewEntries) newsResizeObserver.observe(entry);
+
+      newsToggle.addEventListener('click', () => {
+        const expanded = newsUpdates.classList.toggle('is-expanded');
+        newsToggle.setAttribute('aria-expanded', String(expanded));
+        newsToggle.textContent = expanded ? 'Collapse news' : 'Expand news';
+        if (!expanded) newsUpdates.scrollTop = 0;
+      });
+      newsUpdates.tabIndex = 0;
+      newsToggle.hidden = false;
+    }
 
     const filters = document.getElementById('publication-filters');
     const filterButtons = filters.querySelectorAll('button[data-filter]');

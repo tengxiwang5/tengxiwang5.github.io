@@ -1126,7 +1126,7 @@ span.highlight {
 
 .academic-news {
   box-sizing: border-box;
-  max-block-size: 5.5rem;
+  max-block-size: var(--news-preview-height, none);
   margin: 0;
   padding: .2rem .55rem;
   overflow-y: auto;
