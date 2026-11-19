@@ -6,7 +6,7 @@
   <meta name="author" content="Tengxi Wang (王腾曦)">
   <meta name="description" content="Tengxi Wang's academic homepage, featuring research in remote sensing, computer vision, and multimodal learning.">
   <title>Tengxi Wang | 王腾曦</title>
-  <link rel="stylesheet" href="stylesheet.css?v=20261119-5">
+  <link rel="stylesheet" href="stylesheet.css?v=20261119-6">
   <link rel="icon" href="images/template/avatar.svg" type="image/svg+xml">
 </head>
 <body>
@@ -34,8 +34,11 @@
     </section>
 
     <section class="page-section academic-section" id="news" aria-labelledby="news-heading">
-      <h2 id="news-heading">News</h2>
-      <ul class="academic-news">
+      <div class="academic-news-heading">
+        <h2 id="news-heading">News</h2>
+        <button type="button" class="academic-news-toggle" id="news-toggle" aria-controls="news-updates" aria-expanded="false" hidden>Expand news</button>
+      </div>
+      <ul class="academic-news" id="news-updates" tabindex="0" aria-label="News updates">
         <li class="news-entry">
           <time class="news-date-badge" datetime="2026-07-27">Jul. 2026</time>
           <span>Passed my <strong><em>MPhil thesis defense</em></strong>.</span>
@@ -175,6 +178,15 @@
       window.clearTimeout(toastTimeout);
       toastTimeout = window.setTimeout(() => toast.classList.remove('show'), 2000);
     });
+
+    const newsToggle = document.getElementById('news-toggle');
+    const newsUpdates = document.getElementById('news-updates');
+    newsToggle.addEventListener('click', () => {
+      const expanded = newsUpdates.classList.toggle('is-expanded');
+      newsToggle.setAttribute('aria-expanded', String(expanded));
+      newsToggle.textContent = expanded ? 'Collapse news' : 'Expand news';
+    });
+    newsToggle.hidden = false;
 
     const filters = document.getElementById('publication-filters');
     const filterButtons = filters.querySelectorAll('button[data-filter]');
